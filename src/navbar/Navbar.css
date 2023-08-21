@@ -1,0 +1,126 @@
+@keyframes scaleDown {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.navbar-container {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  /* display: flex; */
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 25px 50px; */
+  color: #001858;
+  /* background: linear-gradient(180deg, #fff2c5 0%, rgba(250, 250, 250, 0) 100%); */
+  z-index: 999;
+  transform: scale(1.2);
+  animation: scaleDown 0.3s ease-in-out forwards;
+}
+
+.left-name {
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.right-lists {
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.right-lists > * {
+  margin: 0 10px;
+}
+
+.right-lists button {
+  all: unset;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #2b2c34;
+  margin-left: 20px;
+}
+
+.right-lists .active,
+.right-lists button:hover {
+  background: #fca61f;
+  border-radius: 10px;
+  color: #fffffe;
+}
+
+.right-button {
+  display: none;
+  font-size: 25px;
+  color: #2b2c34;
+  cursor: pointer;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar-pulldown-Menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: yellow;
+  border: 2px red;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  animation: slideDown 1s forwards;
+}
+
+.navbar-pulldown-Menu > * {
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  padding-left: 55px;
+  cursor: pointer;
+}
+
+.navbar-pulldown-Menu .active,
+.navbar-pulldown-Menu button:hover {
+  color: rgb(105, 105, 240);
+}
+
+@media (max-width: 700px) {
+  .navbar-pulldown-Menu {
+    display: flex;
+  }
+  .right-lists {
+    display: none;
+  }
+  .right-button {
+    display: block;
+  }
+}

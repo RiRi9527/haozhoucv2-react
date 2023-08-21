@@ -1,0 +1,33 @@
+.contact-page {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.contact-page .contact-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-page .contact-title > * {
+  margin: 0 10px;
+}
+
+.contact-icons {
+  font-size: 35px;
+}
+
+.contact-icons > * {
+  margin: 0 30px;
+  cursor: pointer;
+}

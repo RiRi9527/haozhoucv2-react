@@ -1,0 +1,126 @@
+.home-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fff2c5 0%, rgba(250, 250, 250, 0) 100%);
+}
+
+.home-left-container {
+  font-family: Inter;
+  font-style: normal;
+  margin-right: 200px;
+}
+
+.home-left-container > * {
+  margin-bottom: 10px;
+}
+
+.home-left-container h3 {
+  color: #929292;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+
+.home-left-container h1 {
+  color: var(--black, #121212);
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px; /* 129.63% */
+  letter-spacing: 1.08px;
+}
+
+.animation-text-container {
+  width: 310px;
+  height: 74px;
+}
+
+.home-left-container .animation-text {
+  color: var(--black, #121212);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 70px; /* 129.63% */
+  letter-spacing: 1.08px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.home-left-container button {
+  display: inline-flex;
+  height: 52px;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff00f6, #02a8f3, #00ffcc, #ff5e00);
+  background-size: 400% 400%;
+  animation: gradientMove 5s linear infinite;
+  color: var(--white, #fff);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.28px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.home-left-container p {
+  color: var(--grey, #929292);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.home-left-container p:hover {
+  color: rgb(86, 92, 151);
+  font-weight: 1000;
+}
+
+.home-right-container {
+  width: 450px;
+  height: 450px;
+  border-radius: 450px;
+  border: 4px dashed #79a2ce;
+  background-image: url(./homepageavatar.png);
+  background-size: 337px 350px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 990px) {
+  .home-page {
+    flex-direction: column-reverse;
+  }
+  .home-left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .animation-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-right-container {
+    transform: scale(0.8);
+    transition: transform 1s ease-out; /* 添加过渡效果 */
+  }
+}

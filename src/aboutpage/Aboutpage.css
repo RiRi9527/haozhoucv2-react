@@ -1,0 +1,130 @@
+.about-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.about-page-grid-container {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: auto auto;
+  width: 1020px;
+  font-family: Poppins;
+  font-style: normal;
+  line-height: normal;
+}
+
+.about-page-grid-container :first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.about-page-grid-container h1 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about-page-grid-container h2 {
+  color: #696969;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about-photo1-container {
+  height: 240px;
+  width: 480px;
+  background-image: url(./aboutmephoto1.jpg);
+  background-position: center 40%;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.about-page-grid-container h4 {
+  color: #141414;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.about-page-grid-container h4 span {
+  float: right;
+}
+
+.about-page-grid-container h3 {
+  color: #121212;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+}
+
+.about-page-grid-container p {
+  color: #121212;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 185.714% */
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1050px) {
+  .about-page-grid-container {
+    animation: scaleAnimation 0.5s ease-in-out forwards;
+  }
+  .about-page {
+    margin-bottom: -160px;
+  }
+}
+
+@keyframes scaleAnimation {
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes scaleAnimationup {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleAnimationdown {
+  to {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 850px) {
+  .about-page-grid-container {
+    grid-template-columns: auto;
+    width: 480px;
+    animation: scaleAnimationup 0.5s ease-in-out forwards;
+    gap: 20px;
+  }
+  .about-page-grid-container :first-child {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .about-context1-container {
+    margin-top: -15px;
+  }
+  .about-page {
+    margin-bottom: -90px;
+  }
+}
+
+@media (max-width: 501px) {
+  .about-page-grid-container {
+    animation: scaleAnimationdown 0.5s ease-in-out forwards;
+  }
+
+  .about-page {
+    margin: -100px 0;
+  }
+}
